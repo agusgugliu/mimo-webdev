@@ -1,3 +1,7 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -59,28 +63,32 @@ ul {
 
 table {
   width: fit-content;
-  font-size: small;
+  font-size: smaller;
   border: solid 0.5px lightslategray;
 }
 th {
   text-align: center;
   vertical-align: center;
-  border-left: solid 0.25px lightgray;
-  border-right: solid 0.25px lightgray;
-  border-bottom: solid 0.25px lightgray;
+  font-size: smaller;
 }
 td {
-  border-left: solid 0.25px lightgray;
-  border-right: solid 0.25px lightgray;
-  border-bottom: solid 0.25px lightgray;
+  font-size: smaller;
 }
+
 .notas {
   text-align: center;
   vertical-align: center;
 }
 .notasITBA {
   column-count: 20;
+  border: none;
 }
+.notasITBAhead {
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+}
+
 
 a {
   color: gray;
@@ -133,15 +141,12 @@ a {
   border-radius: 5px;
   padding: 5px;
   font-size: medium;
-  font: small-caps;
 }
 .workTitle {
   font-weight: bolder;
-  font: icon;
   color: slategrey;
 }
 .workPlace {
-  font: status-bar;
   color:black;
 }
 
@@ -166,16 +171,13 @@ a {
   border-radius: 5px;
   padding: 5px;
   font-size: large;
-  font: bolder;
 }
 .workTitleNOW {
   font-weight: bolder;
-  font: icon;
   color: whitesmoke;
   padding-left: 10px;
 }
 .workPlaceNOW {
-  font: status-bar;
   color:lightgrey;
 }
 .workImgNOW {
@@ -267,13 +269,24 @@ progress::-moz-progress-bar {
     flex-direction: column;
     flex-wrap: wrap;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: lightgrey;
+  }
+
+  .header, .footer {
+    background-color: lightslategray;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
   }
 
   .container, .containerCol {
     flex-direction: column;
     margin: 0 10px;
   }
-z
+
   .imgPrf {
     float: right;
     display: block;
@@ -295,30 +308,38 @@ z
     margin-right: 2%;
   } 
   h1 {
-    color: #b85c38;
+    color: black;
     font-size: large;
   }
   h2 {
-    color: beige;
-    font-size: large;
+    color: darkslategrey;
+    font-size: medium;
   }
   h3 {
     font-size: large;
     border-bottom: solid 1px;
   }
-  h4 {
-    font-size: small;
-  }
+
   ul {
     width: 100%;
   }
   progress {
     width: 80%;
-    accent-color: #b85c38;    
+    accent-color: darkslategray;    
   }
+
   table {
-    font-size: small;
+    width: fit-content;
+    border: solid 0.5px lightslategray;
     margin: auto;
+  }
+  th {
+    text-align: center;
+    vertical-align: center;
+    font-size: small;
+  }
+  td {
+    font-size: small;
   }
 
   .expImg {
@@ -362,7 +383,6 @@ z
   }
 
   .personalInfo {
-    font-size: smaller;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -371,9 +391,6 @@ z
   .skills {
     margin: auto;
   }
-  .skillList {
-    font-size: smaller;
-  }
   
   hr {
     display: none;
@@ -381,26 +398,27 @@ z
 
   .workExp {
     margin-left: 0;
-    background-color: #e0c097;
+    background-color: lightslategray;
     border: none;
-    line-height: 150%;
+    line-height: 170%;
+    padding: 10px;
   }
   .workTime {
     text-align: left;
     border: none;
     border-radius: 5px;
-    background-color: #2d2424;
+    background-color: darkslategray;
+    color: white;
   }
   .workTitle {
-    font-size: medium;
-    font: normal;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: whitesmoke;
+    font-weight: lighter;
   }
   .workPlace {
-    font-size: medium;
-    font: italic;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #5c3d2e;
+    color: darkslategray;
+    font-weight: lighter;
   }
   .workImg {
     max-height: 45px;
@@ -421,10 +439,6 @@ z
     max-height: 75%;
     margin-bottom: 10px;
   }
-  /*.certImg:hover {
-    transform: none;
-    z-index: none;
-  }*/
 
   .footer {
     position: sticky;
